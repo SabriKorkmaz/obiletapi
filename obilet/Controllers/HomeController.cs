@@ -1,5 +1,4 @@
-﻿
-using ApiHelper.Api;
+﻿using ApiHelper.Api;
 using ApiHelper.Api.Base;
 using ApiHelper.Models;
 using ApiHelper.Models.Base;
@@ -22,7 +21,7 @@ namespace obilet.Controllers
         {
             if (string.IsNullOrEmpty(session.SessionId))
             {
-                ResponseBase<SessionInfo> sessionInfo = await ApiBase.GetSession();
+                var sessionInfo = await ApiBase.GetSession();
                 session.SessionId = sessionInfo.Data.sessionId;
                 session.DeviceId = sessionInfo.Data.deviceId;
             }
@@ -41,7 +40,7 @@ namespace obilet.Controllers
 
             if (response.StatusCode != HttpStatusCode.OK) throw new HttpUnhandledException();
             var responseString = response.Content.ReadAsStringAsync().Result;
-            ResponseBase<object> responseData = JsonConvert.DeserializeObject<ResponseBase<object>>(responseString);
+            var responseData = JsonConvert.DeserializeObject<ResponseBase<object>>(responseString);
             return JsonConvert.SerializeObject(new { responseData.Data, session.SessionId, session.DeviceId });
 
         }
@@ -51,7 +50,7 @@ namespace obilet.Controllers
 
             if (string.IsNullOrEmpty(model.SessionId))
             {
-                ResponseBase<SessionInfo> sessionInfo = await ApiBase.GetSession();
+                var sessionInfo = await ApiBase.GetSession();
                 model.SessionId = sessionInfo.Data.sessionId;
                 model.DeviceId = sessionInfo.Data.deviceId;
             }
@@ -75,7 +74,7 @@ namespace obilet.Controllers
             var response = await Client.Instance.PostAsync("/api/journey/getbusjourneys", stringContent);
             if (response.StatusCode != HttpStatusCode.OK) throw new HttpUnhandledException();
             var responseString = response.Content.ReadAsStringAsync().Result;
-            ResponseBase<object> responseData = JsonConvert.DeserializeObject<ResponseBase<object>>(responseString);
+            var responseData = JsonConvert.DeserializeObject<ResponseBase<object>>(responseString);
             return JsonConvert.SerializeObject(new { responseData.Data, model.SessionId, model.DeviceId });
 
         }

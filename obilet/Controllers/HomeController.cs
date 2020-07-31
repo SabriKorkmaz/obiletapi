@@ -78,5 +78,6 @@ namespace obilet.Controllers
             return JsonConvert.SerializeObject(new { responseData.Data, model.SessionId, model.DeviceId });
 
         }
+
     }
 }

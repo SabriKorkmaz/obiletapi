@@ -30,7 +30,7 @@ namespace obilet.Controllers
                 {
                     Date = Convert.ToDateTime(model.Date),
                     DestinationId = model.DestinationId,
-                    OriginId = model.OriginId
+                    OriginId = model.OriginId 
                 },
                 DeviceSession = new DeviceSession
                 {

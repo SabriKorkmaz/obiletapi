@@ -115,7 +115,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Attribute\SessionAuthorize.cs" />
+    <Compile Include="Controllers\SessionController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\JourneyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -134,13 +137,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Attribute\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ApiHelper\ApiHelper.csproj">
+    <ProjectReference Include="..\ApiHelper\obilet.Services.csproj">
       <Project>{E06BB6A2-C12C-4BA3-9613-497C03536193}</Project>
-      <Name>ApiHelper</Name>
+      <Name>obilet.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

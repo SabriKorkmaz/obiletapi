@@ -1,5 +1,4 @@
-﻿using ApiHelper.Models.Base;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using obilet.Models;
 using System.Net;
 using System.Net.Http;
@@ -7,7 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using ApiHelper.Api;
+using obilet.Model.Session;
+using obilet.Utilities.Client;
 
 namespace obilet.Controllers
 {

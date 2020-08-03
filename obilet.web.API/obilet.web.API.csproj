@@ -140,9 +140,13 @@
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ApiHelper\obilet.Services.csproj">
-      <Project>{E06BB6A2-C12C-4BA3-9613-497C03536193}</Project>
-      <Name>obilet.Services</Name>
+    <ProjectReference Include="..\obilet.Model\obilet.Model.csproj">
+      <Project>{7f3d8aab-b446-4223-9522-feb7e681d8b1}</Project>
+      <Name>obilet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\obilet.Utilities\obilet.Utilities.csproj">
+      <Project>{156dbbdd-c90f-43aa-a8a9-2893453f807b}</Project>
+      <Name>obilet.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

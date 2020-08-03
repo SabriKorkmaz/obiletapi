@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("obilet.Models")]
+[assembly: AssemblyTitle("obilet.Utilities")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("obilet.Models")]
+[assembly: AssemblyProduct("obilet.Utilities")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("40dcd8a5-acf6-4b10-bded-535ae542f7bb")]
+[assembly: Guid("156dbbdd-c90f-43aa-a8a9-2893453f807b")]
 
 // Version information for an assembly consists of the following four values:
 //
